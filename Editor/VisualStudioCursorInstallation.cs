@@ -584,7 +584,7 @@ namespace Microsoft.Unity.VisualStudio.Editor
 			var application = Path;
 
 			var workspace = TryFindWorkspace(directory);
-			workspace ??= directory;
+			workspace = workspace ?? directory;
 			directory = workspace;
 
 			if (EditorPrefs.GetBool(ReuseExistingWindowKey, false))
